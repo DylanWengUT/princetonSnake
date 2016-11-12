@@ -1,0 +1,3 @@
+target 'AnalogStick Demo' do
+    pod 'SIAlertView'
+end
