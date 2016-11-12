@@ -13,7 +13,7 @@ protocol GameServiceManagerDelegate {
     
     func connectedDevicesChanged(_ manager : GameServiceManager, connectedDevices: [String])
     
-    func receiveMove(_ manager : GameServiceManager, toPosition : CGPoint)
+    func receiveMove(_ manager : GameServiceManager, toPosition : CGPoint, rotation: CGFloat)
     //func colorChanged(_ manager : GameServiceManager, colorString: String)
     
 }
@@ -51,11 +51,12 @@ class GameServiceManager : NSObject {
         return session
     }()
 
-    func sendMove(_ position : CGPoint) {
+    func sendMove(_ position : CGPoint, rotation: CGFloat) {
         NSLog("%@", "send position: \(position)")
         // sender
-        var pointToSend = position
-        let pairToSend = (Double(pointToSend.x), Double(pointToSend.y))
+        var pointToSend = (position, rotation)
+        
+        let pairToSend = (Double(pointToSend.0.x), Double(pointToSend.0.y), Double(rotation))
         let data = NSData(bytes: &pointToSend, length: MemoryLayout.size(ofValue: pairToSend))
         
         do {
@@ -138,7 +139,7 @@ extension GameServiceManager : MCSessionDelegate {
     //receive data
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         NSLog("%@", "didReceiveData: \(data.count) bytes")
-        typealias DoublePoint = (x: Double, y: Double)
+        typealias DoublePoint = (x: Double, y: Double, z: Double)
         // receiver
         if (data.count == MemoryLayout<DoublePoint>.size) {
             //var receivedPair = UnsafePointer<DoublePoint>?(data.bytes).memory
@@ -147,7 +148,10 @@ extension GameServiceManager : MCSessionDelegate {
                 return ptr.pointee
             })
             let receivedPoint = CGPoint(x: CGFloat(receivedPair.x), y: CGFloat(receivedPair.y))
-            self.delegate?.receiveMove(self, toPosition: receivedPoint)
+            //..
+            print("receivedPair.z = ", receivedPair.z)
+            let roation = CGFloat(receivedPair.z)
+            self.delegate?.receiveMove(self, toPosition: receivedPoint, rotation: roation)
         } else {
             // error
         }

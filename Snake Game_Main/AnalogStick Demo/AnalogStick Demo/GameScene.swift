@@ -21,7 +21,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var joystickStickImageEnabled = true {
         didSet {
-            
             let image = joystickStickImageEnabled ? UIImage(named: "jStick") : nil
             moveAnalogStick.stick.image = image
         }
@@ -29,7 +28,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var joystickSubstrateImageEnabled = true {
         didSet {
-            
             let image = joystickSubstrateImageEnabled ? UIImage(named: "jSubstrate") : nil
             moveAnalogStick.substrate.image = image
         }
@@ -68,7 +66,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //move my snake
             let mySnake = self.mySnakeNodes
             self.snakeMove(data, snake: mySnake)
-            
             //check for collision
             //self.collision = false
         }
@@ -154,8 +151,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //move head
             if index == 0 {
                 snake[0].position = CGPoint(x: snake[0].position.x + (data.velocity.x * 0.12), y: snake[0].position.y + (data.velocity.y * 0.12))
-                //sent snake head position
-                gameService.sendMove(snake[0].position)
+                // rotate head
+                snake[0].zRotation = data.angular - 90
+                // sent snake head position
+                gameService.sendMove(snake[0].position, rotation: data.angular - 90)
                                 
             } else {
                 let rangeToSprite = SKRange(lowerLimit: 40, upperLimit: 40)
@@ -171,10 +170,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //move opponent snake
-    func oppSnakeMove(toPosition: CGPoint) {
+    func oppSnakeMove(toPosition: CGPoint, rotation: CGFloat) {
         for (index, snakeNode) in oppSnakeNodes.enumerated() {
             if index == 0 {
                 oppSnakeNodes[0].position = toPosition
+                //print("rotation: " , rotation)
+                oppSnakeNodes[0].zRotation = rotation
             } else {
                 //改拐弯重心－头部
                 let rangeToSprite = SKRange(lowerLimit: 40, upperLimit: 40)
@@ -277,9 +278,9 @@ extension GameScene : GameServiceManagerDelegate {
         }
     }
     
-    func receiveMove(_ manager: GameServiceManager, toPosition : CGPoint) {
+    func receiveMove(_ manager: GameServiceManager, toPosition : CGPoint, rotation: CGFloat) {
         OperationQueue.main.addOperation { () -> Void in
-            self.oppSnakeMove(toPosition: toPosition)
+            self.oppSnakeMove(toPosition: toPosition, rotation: rotation)
         }
     }
 }

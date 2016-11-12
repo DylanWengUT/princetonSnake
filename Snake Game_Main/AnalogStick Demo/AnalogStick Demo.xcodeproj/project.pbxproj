@@ -69,7 +69,7 @@
 		9E70BBAEE86E7C38B3195316 /* libPods-AnalogStick Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnalogStick Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7BBAAA034B19F48391A06A /* Pods-AnalogStick Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalogStick Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalogStick Demo/Pods-AnalogStick Demo.release.xcconfig"; sourceTree = "<group>"; };
 		A35BEE4F1D95698D00464277 /* GameServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameServiceManager.swift; sourceTree = "<group>"; };
-		A3915E1B1D96DA4F00556AEE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A3915E1B1D96DA4F00556AEE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3915E1D1D96DC6400556AEE /* AnalogStick Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnalogStick Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3915E2A1D9A199800556AEE /* dragonBody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonBody.png; sourceTree = "<group>"; };
 		A3915E2E1D9A1A7500556AEE /* dragonHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonHead.png; sourceTree = "<group>"; };
