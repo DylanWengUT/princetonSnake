@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46ACE13900FD90F85BCA807F76F29954 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */; };
-		4DCF1AE872F10D52C1FBC051AE191AC9 /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 879EEBFFC8CDF7B40E465804A49B5DA3 /* SIAlertView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		76946469AA16C01C7147FFF3EA65E746 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
-		9390471AFD337B62915F4F9E3974844C /* SIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2876BA757D2CC87F52D68F17EB99602 /* SIAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7423DAEC3CB27CC967B80E315DC4222 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
-		EA1B23A926B39115B17F4670F91CAFE9 /* SIAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF79A7D93B5F6FEDC7765B72FDABBFD3 /* SIAlertView-dummy.m */; };
-		F89ACCFA83B6F5072E30DFCD2A6E78E8 /* Pods-AnalogStick Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7FCC3198B24AEC4D1375DB21DBFFD21 /* Pods-AnalogStick Demo-dummy.m */; };
+		4BF1FBA000BE4323D8E5AC49680E93DA /* SIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2876BA757D2CC87F52D68F17EB99602 /* SIAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75F72A1A916D23CA35057326B859AD8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */; };
+		7823D7D904896FA6460838F8C342FFD3 /* Pods-AnalogStick Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7FCC3198B24AEC4D1375DB21DBFFD21 /* Pods-AnalogStick Demo-dummy.m */; };
+		9135A8823D8457CC696A40CC55FA7FB6 /* SIAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF79A7D93B5F6FEDC7765B72FDABBFD3 /* SIAlertView-dummy.m */; };
+		C0F5BBDD4CF2076AAFEDB774DE9D8C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACC64101FAE4862F8806DB02FC71B0E /* QuartzCore.framework */; };
+		E1F5D56B7E359425B606E196A2E47913 /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 879EEBFFC8CDF7B40E465804A49B5DA3 /* SIAlertView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E4B68607CE204AD9D0D51D2D10EEC791 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F8DCEF773C12275C33820F5B5FAE2E99 /* PBXContainerItemProxy */ = {
+		812E4CCBE49BCAA17B9B8FE54FD937AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2ABBF87871AC6C832AC608076D53814D;
+			remoteGlobalIDString = 6B513E8AFF3320B589748E54F7408E81;
 			remoteInfo = SIAlertView;
 		};
 /* End PBXContainerItemProxy section */
@@ -29,17 +29,17 @@
 /* Begin PBXFileReference section */
 		11E5BABD9979466FE10F70B13B3DD8DF /* Pods-AnalogStick Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnalogStick Demo.release.xcconfig"; sourceTree = "<group>"; };
 		1A88E3D5F02D4A4044FD73A3FFB0480A /* SIAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SIAlertView-prefix.pch"; sourceTree = "<group>"; };
+		3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		46049A9A9FD3292CFF6ED0AE4DD7D035 /* SIAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SIAlertView.xcconfig; sourceTree = "<group>"; };
-		7E8CC287A3ED9AEAFE19915EE694FE8A /* libSIAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSIAlertView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8CC287A3ED9AEAFE19915EE694FE8A /* libSIAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSIAlertView.a; path = libSIAlertView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		879EEBFFC8CDF7B40E465804A49B5DA3 /* SIAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SIAlertView.m; path = SIAlertView/SIAlertView.m; sourceTree = "<group>"; };
-		90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98B7F90E84783A378A90F243C526A6DE /* Pods-AnalogStick Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnalogStick Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BACC64101FAE4862F8806DB02FC71B0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		C2876BA757D2CC87F52D68F17EB99602 /* SIAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SIAlertView.h; path = SIAlertView/SIAlertView.h; sourceTree = "<group>"; };
 		C653089ED8DBA4F4E484D2A5D72CAB6C /* Pods-AnalogStick Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnalogStick Demo-resources.sh"; sourceTree = "<group>"; };
-		E22964FFA8D6668048FD9F12F5F40F20 /* libPods-AnalogStick Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnalogStick Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E22964FFA8D6668048FD9F12F5F40F20 /* libPods-AnalogStick Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AnalogStick Demo.a"; path = "libPods-AnalogStick Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64CB53D9CF74DFB0094458E41069C51 /* Pods-AnalogStick Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnalogStick Demo-frameworks.sh"; sourceTree = "<group>"; };
-		EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		F7FCC3198B24AEC4D1375DB21DBFFD21 /* Pods-AnalogStick Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnalogStick Demo-dummy.m"; sourceTree = "<group>"; };
 		F9059ECC3EB2655EA8971BE1C408CE1C /* SIAlertView.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SIAlertView.bundle; path = SIAlertView/SIAlertView.bundle; sourceTree = "<group>"; };
 		FA6F1DED1322DF048F3039F540B53354 /* Pods-AnalogStick Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnalogStick Demo-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -48,20 +48,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20E7384407AC348E6016DAFE0513DC66 /* Frameworks */ = {
+		17CD8445555B8CB8B28B9914327B16C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76946469AA16C01C7147FFF3EA65E746 /* Foundation.framework in Frameworks */,
-				46ACE13900FD90F85BCA807F76F29954 /* QuartzCore.framework in Frameworks */,
+				E4B68607CE204AD9D0D51D2D10EEC791 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB52B3CDBEDB421F77BD4E8CE55F08E6 /* Frameworks */ = {
+		8DD750D217B0230D7DDA77C220C4280E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7423DAEC3CB27CC967B80E315DC4222 /* Foundation.framework in Frameworks */,
+				75F72A1A916D23CA35057326B859AD8A /* Foundation.framework in Frameworks */,
+				C0F5BBDD4CF2076AAFEDB774DE9D8C5D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				89F803C7E2D77E11F2120CB28FE0B795 /* iOS */,
+				C7AB6F27FF3606F9360547F8F1977A63 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,15 +104,6 @@
 				A124DA8D51EE8AD9D554294AFC87FADB /* Products */,
 				B2BF029AD991448DD1285256348D04B4 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		89F803C7E2D77E11F2120CB28FE0B795 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */,
-				EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		A124DA8D51EE8AD9D554294AFC87FADB /* Products */ = {
@@ -147,6 +138,15 @@
 			path = "Target Support Files/Pods-AnalogStick Demo";
 			sourceTree = "<group>";
 		};
+		C7AB6F27FF3606F9360547F8F1977A63 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3AC5D9C5B838BE747D0154460D02F926 /* Foundation.framework */,
+				BACC64101FAE4862F8806DB02FC71B0E /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		EEB13903CFEDA2DD7618A3FFF8E8D248 /* SIAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +155,7 @@
 				FB3D96C83026C00612182C5D885EE39F /* Resources */,
 				7ACD464516372FA9BE5A3E4F01E87211 /* Support Files */,
 			);
+			name = SIAlertView;
 			path = SIAlertView;
 			sourceTree = "<group>";
 		};
@@ -169,24 +170,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		23EE6B10A87ACE3CF247AF9C20217762 /* Headers */ = {
+		8D6FEF58518D0F53CBD23FF58C54CE05 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9390471AFD337B62915F4F9E3974844C /* SIAlertView.h in Headers */,
+				4BF1FBA000BE4323D8E5AC49680E93DA /* SIAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2ABBF87871AC6C832AC608076D53814D /* SIAlertView */ = {
+		6B513E8AFF3320B589748E54F7408E81 /* SIAlertView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BE02A57218DC01BF14A2D9FD7D3CF87 /* Build configuration list for PBXNativeTarget "SIAlertView" */;
+			buildConfigurationList = FFD960C89DC2BC53257B7D907604A1B5 /* Build configuration list for PBXNativeTarget "SIAlertView" */;
 			buildPhases = (
-				1D1CFFF780D8741A8D25B816A62F4543 /* Sources */,
-				20E7384407AC348E6016DAFE0513DC66 /* Frameworks */,
-				23EE6B10A87ACE3CF247AF9C20217762 /* Headers */,
+				E6D890E75039B398670996F9A2D9B685 /* Sources */,
+				8DD750D217B0230D7DDA77C220C4280E /* Frameworks */,
+				8D6FEF58518D0F53CBD23FF58C54CE05 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -197,17 +198,17 @@
 			productReference = 7E8CC287A3ED9AEAFE19915EE694FE8A /* libSIAlertView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		837B5A35857B051B0E823961F6EF02E0 /* Pods-AnalogStick Demo */ = {
+		FD1562EBF18E2A399ECDE4404D345C3F /* Pods-AnalogStick Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C2C698A87D5882A75123B092A0408E8 /* Build configuration list for PBXNativeTarget "Pods-AnalogStick Demo" */;
+			buildConfigurationList = E75D67B76716FB7E0AA9AEA6B2EC50D2 /* Build configuration list for PBXNativeTarget "Pods-AnalogStick Demo" */;
 			buildPhases = (
-				9924D28EF29C8A6BC770C42A27B0A2B9 /* Sources */,
-				FB52B3CDBEDB421F77BD4E8CE55F08E6 /* Frameworks */,
+				14024868993E4F4CFCB235EF608D7905 /* Sources */,
+				17CD8445555B8CB8B28B9914327B16C9 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				28BDD168F1E9993294E94686163D5E65 /* PBXTargetDependency */,
+				9FBB786FA667D5113B9C8062A3D46942 /* PBXTargetDependency */,
 			);
 			name = "Pods-AnalogStick Demo";
 			productName = "Pods-AnalogStick Demo";
@@ -235,64 +236,43 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				837B5A35857B051B0E823961F6EF02E0 /* Pods-AnalogStick Demo */,
-				2ABBF87871AC6C832AC608076D53814D /* SIAlertView */,
+				FD1562EBF18E2A399ECDE4404D345C3F /* Pods-AnalogStick Demo */,
+				6B513E8AFF3320B589748E54F7408E81 /* SIAlertView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1D1CFFF780D8741A8D25B816A62F4543 /* Sources */ = {
+		14024868993E4F4CFCB235EF608D7905 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA1B23A926B39115B17F4670F91CAFE9 /* SIAlertView-dummy.m in Sources */,
-				4DCF1AE872F10D52C1FBC051AE191AC9 /* SIAlertView.m in Sources */,
+				7823D7D904896FA6460838F8C342FFD3 /* Pods-AnalogStick Demo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9924D28EF29C8A6BC770C42A27B0A2B9 /* Sources */ = {
+		E6D890E75039B398670996F9A2D9B685 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F89ACCFA83B6F5072E30DFCD2A6E78E8 /* Pods-AnalogStick Demo-dummy.m in Sources */,
+				9135A8823D8457CC696A40CC55FA7FB6 /* SIAlertView-dummy.m in Sources */,
+				E1F5D56B7E359425B606E196A2E47913 /* SIAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		28BDD168F1E9993294E94686163D5E65 /* PBXTargetDependency */ = {
+		9FBB786FA667D5113B9C8062A3D46942 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SIAlertView;
-			target = 2ABBF87871AC6C832AC608076D53814D /* SIAlertView */;
-			targetProxy = F8DCEF773C12275C33820F5B5FAE2E99 /* PBXContainerItemProxy */;
+			target = 6B513E8AFF3320B589748E54F7408E81 /* SIAlertView */;
+			targetProxy = 812E4CCBE49BCAA17B9B8FE54FD937AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		466489C27EE363EB52BE15C1CC42318F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46049A9A9FD3292CFF6ED0AE4DD7D035 /* SIAlertView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SIAlertView/SIAlertView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -310,6 +290,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -329,22 +310,25 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		8FB16F6FAA9C43AD8A3A1066C77EE13F /* Debug */ = {
+		269E1E3AE80F321C32F65FCCF5B74D80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEEEC757C26C68C533D8302A3C3D2633 /* Pods-AnalogStick Demo.debug.xcconfig */;
+			baseConfigurationReference = 11E5BABD9979466FE10F70B13B3DD8DF /* Pods-AnalogStick Demo.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -353,9 +337,9 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -373,6 +357,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -387,38 +372,44 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B07DCB8248EF7C2C138F8A059B8ECB58 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11E5BABD9979466FE10F70B13B3DD8DF /* Pods-AnalogStick Demo.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		B87EB1C874CD1684113E69C85F9BADE3 /* Release */ = {
+		871EE4014CA7EB74DE2BB42E2450C3E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 46049A9A9FD3292CFF6ED0AE4DD7D035 /* SIAlertView.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SIAlertView/SIAlertView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D84FD3FE940AC44DA0338B84AD9C85AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46049A9A9FD3292CFF6ED0AE4DD7D035 /* SIAlertView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -432,8 +423,32 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
+		};
+		E084EC90021F6F422F8595A652E332DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEEEC757C26C68C533D8302A3C3D2633 /* Pods-AnalogStick Demo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -441,26 +456,26 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				47BEF9D903506B003EA5C2B249729489 /* Debug */,
-				AAF678CED40D3499169D10F63CA0719E /* Release */,
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C2C698A87D5882A75123B092A0408E8 /* Build configuration list for PBXNativeTarget "Pods-AnalogStick Demo" */ = {
+		E75D67B76716FB7E0AA9AEA6B2EC50D2 /* Build configuration list for PBXNativeTarget "Pods-AnalogStick Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8FB16F6FAA9C43AD8A3A1066C77EE13F /* Debug */,
-				B07DCB8248EF7C2C138F8A059B8ECB58 /* Release */,
+				E084EC90021F6F422F8595A652E332DC /* Debug */,
+				269E1E3AE80F321C32F65FCCF5B74D80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BE02A57218DC01BF14A2D9FD7D3CF87 /* Build configuration list for PBXNativeTarget "SIAlertView" */ = {
+		FFD960C89DC2BC53257B7D907604A1B5 /* Build configuration list for PBXNativeTarget "SIAlertView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				466489C27EE363EB52BE15C1CC42318F /* Debug */,
-				B87EB1C874CD1684113E69C85F9BADE3 /* Release */,
+				871EE4014CA7EB74DE2BB42E2450C3E1 /* Debug */,
+				D84FD3FE940AC44DA0338B84AD9C85AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

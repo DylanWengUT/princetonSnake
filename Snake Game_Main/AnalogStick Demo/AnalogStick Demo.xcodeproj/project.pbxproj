@@ -24,10 +24,10 @@
 		8C2C1F7319DD762300510F35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C1F7219DD762300510F35 /* Images.xcassets */; };
 		8C2C1F7619DD762300510F35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C1F7419DD762300510F35 /* LaunchScreen.xib */; };
 		8C2C1F8219DD762300510F35 /* AnalogStick_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C1F8119DD762300510F35 /* AnalogStick_DemoTests.swift */; };
+		A1DCCAE61DD7DCD70038F321 /* dragonHead.png in Resources */ = {isa = PBXBuildFile; fileRef = A1DCCAE51DD7DCD70038F321 /* dragonHead.png */; };
 		A35BEE501D95698D00464277 /* GameServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35BEE4F1D95698D00464277 /* GameServiceManager.swift */; };
 		A3915E1C1D96DA4F00556AEE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A3915E1B1D96DA4F00556AEE /* Podfile */; };
 		A3915E2B1D9A199800556AEE /* dragonBody.png in Resources */ = {isa = PBXBuildFile; fileRef = A3915E2A1D9A199800556AEE /* dragonBody.png */; };
-		A3915E2F1D9A1A7500556AEE /* dragonHead.png in Resources */ = {isa = PBXBuildFile; fileRef = A3915E2E1D9A1A7500556AEE /* dragonHead.png */; };
 		C1CFFF2124B5100F130C9710 /* libPods-AnalogStick Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E70BBAEE86E7C38B3195316 /* libPods-AnalogStick Demo.a */; };
 		EE6E9F4A1C8CB1D600B1F608 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = EE6E9F481C8CB1D600B1F608 /* gear.png */; };
 		EE6E9F4B1C8CB1D600B1F608 /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE6E9F491C8CB1D600B1F608 /* gear@2x.png */; };
@@ -68,11 +68,11 @@
 		8C2C1F8119DD762300510F35 /* AnalogStick_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogStick_DemoTests.swift; sourceTree = "<group>"; };
 		9E70BBAEE86E7C38B3195316 /* libPods-AnalogStick Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnalogStick Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7BBAAA034B19F48391A06A /* Pods-AnalogStick Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalogStick Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalogStick Demo/Pods-AnalogStick Demo.release.xcconfig"; sourceTree = "<group>"; };
+		A1DCCAE51DD7DCD70038F321 /* dragonHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragonHead.png; path = ../../../../Desktop/dragonHead.png; sourceTree = "<group>"; };
 		A35BEE4F1D95698D00464277 /* GameServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameServiceManager.swift; sourceTree = "<group>"; };
 		A3915E1B1D96DA4F00556AEE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3915E1D1D96DC6400556AEE /* AnalogStick Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnalogStick Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3915E2A1D9A199800556AEE /* dragonBody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonBody.png; sourceTree = "<group>"; };
-		A3915E2E1D9A1A7500556AEE /* dragonHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonHead.png; sourceTree = "<group>"; };
 		CA538C515C56CD6A1EEFD6A1 /* Pods-AnalogStick Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalogStick Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalogStick Demo/Pods-AnalogStick Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		EE6E9F481C8CB1D600B1F608 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
 		EE6E9F491C8CB1D600B1F608 /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				A3915E2A1D9A199800556AEE /* dragonBody.png */,
-				A3915E2E1D9A1A7500556AEE /* dragonHead.png */,
 				EE6E9F481C8CB1D600B1F608 /* gear.png */,
+				A1DCCAE51DD7DCD70038F321 /* dragonHead.png */,
 				EE6E9F491C8CB1D600B1F608 /* gear@2x.png */,
 				8C073A951B70FC5A005CE3AD /* apple.png */,
 				8C073A961B70FC5A005CE3AD /* apple@2x.png */,
@@ -292,7 +292,7 @@
 				8C2C1F7619DD762300510F35 /* LaunchScreen.xib in Resources */,
 				8C073AA41B70FC5A005CE3AD /* jSubstrate@2x.png in Resources */,
 				8C073AA01B70FC5A005CE3AD /* apple@2x.png in Resources */,
-				A3915E2F1D9A1A7500556AEE /* dragonHead.png in Resources */,
+				A1DCCAE61DD7DCD70038F321 /* dragonHead.png in Resources */,
 				A3915E1C1D96DA4F00556AEE /* Podfile in Resources */,
 				8C2C1F7319DD762300510F35 /* Images.xcassets in Resources */,
 				8C073A9F1B70FC5A005CE3AD /* apple.png in Resources */,
@@ -361,7 +361,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
