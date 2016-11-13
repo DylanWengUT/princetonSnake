@@ -10,6 +10,12 @@
 
 import SpriteKit
 
+enum NodeType: UInt32 {
+    case playerHead = 0x1 // 0001
+    case playerBody = 0x2 // 0010
+    case enemyHead = 0x4 // 0100
+    case enemyBody = 0x8 // 1000
+}
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     //for collision detection
@@ -78,44 +84,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //add opponent snake
         createEnemySnake(snake: &oppSnakeNodes)
-        setUpCollisionBitMask(snake: &oppSnakeNodes)
         
         //add snake & oppSnake
-        createSnake(snake: &mySnakeNodes)
-        setUpCollisionBitMask(snake: &mySnakeNodes)
-       
-        /*
-        for node in oppSnakeNodes {
-            insertChild(node, at: 0)
-        }*/
+        createPlayerSnake(snake: &mySnakeNodes)
         
         view.isMultipleTouchEnabled = true
     }
     
     // keep track of num of snakes
     var snakeCount = 0;
-    
-    func setUpCollisionBitMask(snake: inout [SKSpriteNode]) {
-        for node in snake {
-            node.physicsBody!.isDynamic = true
-            node.physicsBody!.categoryBitMask = UInt32(snakeCount)
-            // case: only 2 snakes, needs improvement
-            if(snakeCount == 0) {
-                node.physicsBody!.collisionBitMask = UInt32(1)
-                node.physicsBody!.contactTestBitMask = UInt32(1)
-            } else {
-                node.physicsBody!.collisionBitMask = UInt32(0)
-                node.physicsBody!.contactTestBitMask = UInt32(0)
-            }
-        }
-        snakeCount += 1
-    }
 
     //collision flag
     var collision = false
     //check collision
     func didBegin(_ contact: SKPhysicsContact) {
         
+        /*
         //send alert message
         if(!collision) {
             print("撞上了！")
@@ -124,26 +108,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             mySnakeNodes[0].position = CGPoint(x: 100, y: 100)
             //print(mySnakeNodes[0].position)
             collision = true
-        }
+        }*/
         //self.presentViewController(alertController, animated: true, completion: nil)
-        /*
-        let firstNode = contact.bodyA.node as! SKSpriteNode
-        let secondNode = contact.bodyB.node as! SKSpriteNode
         
-        if (contact.bodyA.categoryBitMask == bodyCategory) && (contact.bodyB.categoryBitMask == headCategory) {
+        let firstNode = contact.bodyA.node as? SKSpriteNode
+        let secondNode = contact.bodyB.node as? SKSpriteNode
+        
+        if ( ((Int(contact.bodyA.categoryBitMask) & Int(contact.bodyB.collisionBitMask)) != 0) || ((Int(contact.bodyB.categoryBitMask) & Int(contact.bodyA.collisionBitMask)) != 0) ) {
             
             print("看这里！！！！！！！！！！")
             
+            /*
             let contactPoint = contact.contactPoint
             let contact_y = contactPoint.y
-            let target_y = secondNode.position.y
-            let margin = secondNode.frame.size.height/2 - 25
+            let target_y = secondNode?.position.y
+            let margin = (secondNode?.frame.size.height)!/2 - 25
             
-            if (contact_y > (target_y - margin)) &&
-                (contact_y < (target_y + margin)) {
+            if (contact_y > (target_y! - margin)) &&
+                (contact_y < (target_y! + margin)) {
                 print("Hit")
-            }
-        }*/
+            }*/
+        }
     }
     
     //move my snake
@@ -199,34 +184,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //create an enemy snake
     func createEnemySnake( snake: inout [SKSpriteNode]) { //inout- pass by reference
-        
-        snake.append(addSnakeHead(CGPoint(x: frame.midX, y: frame.midY)))
-        
+        snake.append(addEnemySnakeHead(CGPoint(x: frame.midX, y: frame.midY)))
         for i in 1 ..< 13 {
-            snake.append(addSnakeBody(CGPoint(x: frame.midX + CGFloat(i*10), y: frame.midY)))
+            snake.append(addEnemySnakeBody(CGPoint(x: frame.midX + CGFloat(i*10), y: frame.midY)))
         }
-    
     }
+    
     //create a snake
-    func createSnake( snake: inout [SKSpriteNode]) {
+    func createPlayerSnake( snake: inout [SKSpriteNode]) {
        
-        let x = Int(arc4random_uniform(600)+10)
+        let x = Int(arc4random_uniform(600)+15)
         var y: UInt32!
         repeat {
-            y = arc4random_uniform(375)
+            y = arc4random_uniform(360) + 15
         } while y == UInt32(frame.midY)
         
-        snake.append(addSnakeHead(CGPoint(x: CGFloat(x), y: CGFloat(y))))
+        snake.append(addPlayerSnakeHead(CGPoint(x: CGFloat(x), y: CGFloat(y))))
         
         for i in 1 ..< 13 {
-            snake.append(addSnakeBody(CGPoint(x: CGFloat(x + i * 10), y: CGFloat(y))))
+            snake.append(addPlayerSnakeBody(CGPoint(x: CGFloat(x + i * 10), y: CGFloat(y))))
         }
         
     }
-
-    
-    //adding head
-    func addSnakeHead(_ position: CGPoint) ->  SKSpriteNode {
+    //*********************************************************************************
+    func addPlayerSnakeHead(_ position: CGPoint) ->  SKSpriteNode {
         let snakeImage = UIImage(named: "dragonHead")
         
         let texture = SKTexture(image: snakeImage!)
@@ -234,7 +215,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         snakeHead.physicsBody = SKPhysicsBody(texture: texture, size: CGSize(width: 40, height: 40) /*snakeHead.size*/)
         snakeHead.physicsBody!.affectedByGravity = false
         snakeHead.physicsBody!.allowsRotation = false
-        snakeHead.physicsBody!.isDynamic = false    // ignore forces
+        snakeHead.physicsBody!.isDynamic = true    // ignore forces
+        
+        snakeHead.physicsBody!.categoryBitMask = NodeType.playerHead.rawValue
+        snakeHead.physicsBody!.collisionBitMask = NodeType.enemyBody.rawValue
+        snakeHead.physicsBody!.contactTestBitMask = NodeType.enemyBody.rawValue
         
         insertChild(snakeHead, at: 0)
         snakeHead.position = position
@@ -242,7 +227,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return snakeHead
     }
     
-    func addSnakeBody(_ position: CGPoint) ->  SKSpriteNode {
+    func addEnemySnakeHead(_ position: CGPoint) ->  SKSpriteNode {
+        let snakeImage = UIImage(named: "dragonHead")
+        
+        let texture = SKTexture(image: snakeImage!)
+        let snakeHead = SKSpriteNode(texture: texture)
+        snakeHead.physicsBody = SKPhysicsBody(texture: texture, size: CGSize(width: 40, height: 40) /*snakeHead.size*/)
+        snakeHead.physicsBody!.affectedByGravity = false
+        snakeHead.physicsBody!.allowsRotation = false
+        snakeHead.physicsBody!.isDynamic = true    // ignore forces
+        
+        snakeHead.physicsBody!.categoryBitMask = NodeType.enemyHead.rawValue
+        snakeHead.physicsBody!.collisionBitMask = NodeType.playerBody.rawValue
+        snakeHead.physicsBody!.contactTestBitMask = NodeType.playerBody.rawValue
+        
+        insertChild(snakeHead, at: 0)
+        snakeHead.position = position
+        //snakeNodes.append(snake)
+        return snakeHead
+    }
+    
+    func addPlayerSnakeBody(_ position: CGPoint) ->  SKSpriteNode {
         let bodyImage = UIImage(named: "dragonBody")
         
         let texture = SKTexture(image: bodyImage!)
@@ -250,17 +255,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         snakeBody.physicsBody = SKPhysicsBody(texture: texture, size: snakeBody.size)
         snakeBody.physicsBody!.affectedByGravity =  false
         snakeBody.physicsBody!.allowsRotation = false
-        snakeBody.physicsBody!.isDynamic = false    // ignore forces
+        snakeBody.physicsBody!.isDynamic = true    // ignore forces
         
-        //collision & contact
-        //snakeBody.physicsBody!.collisionBitMask = headCategory
-        //snakeBody.physicsBody!.contactTestBitMask = headCategory
+        //collision & cotect
+        snakeBody.physicsBody!.categoryBitMask = NodeType.playerBody.rawValue
+        snakeBody.physicsBody!.collisionBitMask = NodeType.enemyHead.rawValue
+        snakeBody.physicsBody!.contactTestBitMask = NodeType.enemyHead.rawValue
         
         insertChild(snakeBody, at: 0)
         snakeBody.position = position
         //snakeNodes.append(snakeBody)
         return snakeBody
     }
+    
+    func addEnemySnakeBody(_ position: CGPoint) ->  SKSpriteNode {
+        let bodyImage = UIImage(named: "dragonBody")
+        
+        let texture = SKTexture(image: bodyImage!)
+        let snakeBody = SKSpriteNode(texture: texture)
+        snakeBody.physicsBody = SKPhysicsBody(texture: texture, size: snakeBody.size)
+        snakeBody.physicsBody!.affectedByGravity =  false
+        snakeBody.physicsBody!.allowsRotation = false
+        snakeBody.physicsBody!.isDynamic = true    // ignore forces
+        
+        //collision & cotect
+        snakeBody.physicsBody!.categoryBitMask = NodeType.enemyBody.rawValue
+        snakeBody.physicsBody!.collisionBitMask = NodeType.playerHead.rawValue
+        snakeBody.physicsBody!.contactTestBitMask = NodeType.playerHead.rawValue
+        
+        insertChild(snakeBody, at: 0)
+        snakeBody.position = position
+        //snakeNodes.append(snakeBody)
+        return snakeBody
+    }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
