@@ -154,9 +154,9 @@
 			children = (
 				8C2C1F6719DD762300510F35 /* AppDelegate.swift */,
 				EECFA6FC1D909BC8002FD501 /* AnalogJoystick.swift */,
+				A35BEE4F1D95698D00464277 /* GameServiceManager.swift */,
 				8C2C1F6B19DD762300510F35 /* GameScene.swift */,
 				8C2C1F6D19DD762300510F35 /* GameViewController.swift */,
-				A35BEE4F1D95698D00464277 /* GameServiceManager.swift */,
 				8C2C1F6F19DD762300510F35 /* Main.storyboard */,
 				8C2C1F7219DD762300510F35 /* Images.xcassets */,
 				8C2C1F7419DD762300510F35 /* LaunchScreen.xib */,
