@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,19 +39,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky.png" translatesAutoresizingMaskIntoConstraints="NO" id="OlG-a0-eV2">
+                                <rect key="frame" x="-317" y="-33" width="1008" height="700"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1008" id="o1U-Gx-ZGG"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rp-um-ivN">
-                                <rect key="frame" x="136" y="315" width="103" height="36"/>
-                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
-                                <state key="normal" title="Start Game"/>
+                                <rect key="frame" x="119" y="380.5" width="137" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleShadowColor" red="0.95241063833236694" green="0.6067240834236145" blue="0.090255312621593475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="LVB-YS-i5n" kind="show" id="nWy-On-scG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-ef-cqT">
+                                <rect key="frame" x="26" y="-33" width="333" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Welcome to Dragonio! This game was developed by Zidong Weng, Ethan Xue, and Root Luo, during Hack Princeton 2016. The game was inspired by the popular slitherio and is designed for casual 1v1 matches.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6rp-um-ivN" firstAttribute="centerX" secondItem="BDH-PI-x9n" secondAttribute="centerX" id="Fi5-zH-SFw"/>
-                            <constraint firstItem="6rp-um-ivN" firstAttribute="centerY" secondItem="BDH-PI-x9n" secondAttribute="centerY" id="KoJ-5A-fuJ"/>
+                            <constraint firstItem="6rp-um-ivN" firstAttribute="centerY" secondItem="BDH-PI-x9n" secondAttribute="centerY" constant="70" id="KoJ-5A-fuJ"/>
+                            <constraint firstItem="OlG-a0-eV2" firstAttribute="top" secondItem="BDH-PI-x9n" secondAttribute="topMargin" constant="-33" id="M0r-cb-HPV"/>
+                            <constraint firstItem="OlG-a0-eV2" firstAttribute="bottom" secondItem="My1-n3-gKX" secondAttribute="top" id="prj-MO-CBh"/>
+                            <constraint firstItem="OlG-a0-eV2" firstAttribute="leading" secondItem="BDH-PI-x9n" secondAttribute="leading" constant="-317" id="uTn-qc-d7X"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -59,4 +80,7 @@
             <point key="canvasLocation" x="-714.39999999999998" y="88.605697151424295"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sky.png" width="1218" height="954"/>
+    </resources>
 </document>
