@@ -187,16 +187,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //create a snake
     func createPlayerSnake( snake: inout [SKSpriteNode]) {
        
-        let x = Int(arc4random_uniform(600)+10)
+        let x = Int(arc4random_uniform(600)+70)
         var y: UInt32!
         repeat {
-            y = arc4random_uniform(370)+10
-        } while y == UInt32(frame.midY)
+            y = arc4random_uniform(360)+10
+        } while y > UInt32(frame.midY) -  20 && y < UInt32(frame.midY) +  20
         
         snake.append(addPlayerSnakeHead(CGPoint(x: CGFloat(x), y: CGFloat(y))))
+        var C = (arc4random_uniform(2) == 1 ? 10 : -10)
         
         for i in 1 ..< 13 {
-            snake.append(addPlayerSnakeBody(CGPoint(x: CGFloat(x + i * 10), y: CGFloat(y))))
+            snake.append(addPlayerSnakeBody(CGPoint(x: CGFloat(x + i * C), y: CGFloat(y))))
+        }
+        if (C == -10) {
+            snake[0].zRotation = 3.14
         }
         
     }
