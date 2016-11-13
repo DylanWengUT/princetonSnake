@@ -33,7 +33,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    let moveAnalogStick =  🕹(diameter: 110)
+    let moveAnalogStick =  🕹(diameter: 80)
     
     //multipeer conectivity
     let gameService = GameServiceManager()
@@ -152,12 +152,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if index == 0 {
                 snake[0].position = CGPoint(x: snake[0].position.x + (data.velocity.x * 0.12), y: snake[0].position.y + (data.velocity.y * 0.12))
                 // rotate head
-                snake[0].zRotation = data.angular - 90
+                snake[0].zRotation = data.angular - 3.14/2
                 // sent snake head position
-                gameService.sendMove(snake[0].position, rotation: data.angular - 90)
+                gameService.sendMove(snake[0].position, rotation: data.angular - 3.14/2)
                                 
             } else {
-                let rangeToSprite = SKRange(lowerLimit: 40, upperLimit: 40)
+                var rangeToSprite = SKRange(lowerLimit: 10, upperLimit: 10)
+                if index == 1 {
+                    rangeToSprite = SKRange(lowerLimit: 15, upperLimit: 15)
+                }
                 let distanceConstraint = SKConstraint.distance(rangeToSprite, to: snake[index-1])
                 // Define Constraints for orientation/targeting behavior
                 let rangeForOrientation = SKRange(lowerLimit: 0, upperLimit: 0)
@@ -178,7 +181,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 oppSnakeNodes[0].zRotation = rotation
             } else {
                 //改拐弯重心－头部
-                let rangeToSprite = SKRange(lowerLimit: 40, upperLimit: 40)
+                var rangeToSprite = SKRange(lowerLimit: 10, upperLimit: 10)
+                if index == 1 {
+                    rangeToSprite = SKRange(lowerLimit: 15, upperLimit: 15)
+                }
                 let distanceConstraint = SKConstraint.distance(rangeToSprite, to: oppSnakeNodes[index-1])
                 // Define Constraints for orientation/targeting behavior
                 let rangeForOrientation = SKRange(lowerLimit: 0, upperLimit: 0)
@@ -202,11 +208,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         snake.append(addSnakeBody(CGPoint(x: position.x + 80, y: position.y)))
         */
         snake.append(addSnakeHead(CGPoint(x: frame.midX, y: frame.midY)))
+        snake.append(addSnakeBody(CGPoint(x: frame.midX + 20, y: frame.midY)))
+        snake.append(addSnakeBody(CGPoint(x: frame.midX + 30, y: frame.midY)))
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 40, y: frame.midY)))
+        snake.append(addSnakeBody(CGPoint(x: frame.midX + 60, y: frame.midY)))
+        snake.append(addSnakeBody(CGPoint(x: frame.midX + 70, y: frame.midY)))
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 80, y: frame.midY)))
+        snake.append(addSnakeBody(CGPoint(x: frame.midX + 90, y: frame.midY)))
+        snake.append(addSnakeBody(CGPoint(x: frame.midX + 100, y: frame.midY)))
+        snake.append(addSnakeBody(CGPoint(x: frame.midX + 110, y: frame.midY)))
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 120, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 160, y: frame.midY)))
-
+        snake.append(addSnakeBody(CGPoint(x: frame.midX + 130, y: frame.midY)))
     }
     
     //adding head
@@ -215,7 +227,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let texture = SKTexture(image: snakeImage!)
         let snakeHead = SKSpriteNode(texture: texture)
-        snakeHead.physicsBody = SKPhysicsBody(texture: texture, size: CGSize(width: 45, height: 45) /*snakeHead.size*/)
+        snakeHead.physicsBody = SKPhysicsBody(texture: texture, size: CGSize(width: 40, height: 40) /*snakeHead.size*/)
         snakeHead.physicsBody!.affectedByGravity = false
         snakeHead.physicsBody!.allowsRotation = false
         snakeHead.physicsBody!.isDynamic = false    // ignore forces
