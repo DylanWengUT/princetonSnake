@@ -10,6 +10,7 @@
 
 import SpriteKit
 
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
     //for collision detection
     //let headCategory: UInt32 = 0 //0x1 << 0
@@ -207,6 +208,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         snake.append(addSnakeBody(CGPoint(x: position.x + 60, y: position.y)))
         snake.append(addSnakeBody(CGPoint(x: position.x + 80, y: position.y)))
         */
+        
         snake.append(addSnakeHead(CGPoint(x: frame.midX, y: frame.midY)))
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 20, y: frame.midY)))
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 30, y: frame.midY)))
