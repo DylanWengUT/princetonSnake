@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnalogStick Demo/GameScene.swift"
-            timestampString = "500698281.908196"
+            timestampString = "500714296.511647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "addPlayerSnakeHead(_:)"
             landmarkType = "7">
          </BreakpointContent>

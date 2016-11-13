@@ -23,7 +23,6 @@ class GameViewController: UIViewController {
         // Configure the view.
         let scene = GameScene(size: self.view.bounds.size)
         //self.scene = scene
-        
         scene.backgroundColor = .white
         if let skView = self.view as? SKView {
             skView.showsFPS = true

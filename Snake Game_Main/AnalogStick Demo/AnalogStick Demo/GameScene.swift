@@ -76,12 +76,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //move my snake
             let mySnake = self.mySnakeNodes
             self.snakeMove(data, snake: mySnake)
-            //check for collision
-            //self.collision = false
         }
         
         //MARK: Handlers end
-        
         joystickStickImageEnabled = true
         joystickSubstrateImageEnabled = true
         
@@ -94,32 +91,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         view.isMultipleTouchEnabled = true
     }
     
-    // keep track of num of snakes
-    var snakeCount = 0;
-
-    //collision flag
-    var collision = false
     //check collision
     func didBegin(_ contact: SKPhysicsContact) {
-        
-        /*
-        //send alert message
-        if(!collision) {
-            print("撞上了！")
-            //showPauseAlert()
-            //not working - fix - update view??
-            mySnakeNodes[0].position = CGPoint(x: 100, y: 100)
-            //print(mySnakeNodes[0].position)
-            collision = true
-        }
-        //self.presentViewController(alertController, animated: true, completion: nil)
-        
-        let firstNode = contact.bodyA.node as? SKSpriteNode
-        let secondNode = contact.bodyB.node as? SKSpriteNode
-        */
         if ( gameOn && ( ((Int(contact.bodyA.categoryBitMask) & Int(contact.bodyB.collisionBitMask)) != 0) || ((Int(contact.bodyB.categoryBitMask) & Int(contact.bodyA.collisionBitMask)) != 0) ) ) {
             
-            print("看这里！！！！！！！！！！")
+            print("Colliding！！！！！！！！！！")
             gameOn = false;
             endGame()
         }
@@ -314,11 +290,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func endGame() {
         // disconnect from multipeer connectivity
         //disconnectFromMC(manager: GameServiceManager)
-        self.gameService.session.disconnect()
+        //self.gameService.session.disconnect()
         if (gameOn == false) {
             showPauseAlert();
         }
-        
+    }
+    
+    deinit {
+        self.gameService.session.disconnect()
+        print("deinit")
     }
 }
 
@@ -341,19 +321,31 @@ extension GameScene : GameServiceManagerDelegate {
 // alert message
 private extension GameScene {
     func showPauseAlert() {
-
         let alertView = SIAlertView(title: "Game end!!", andMessage: "Do you want to restart?")
         self.backgroundColor = UIColor.black
         alertView?.addButton(withTitle: "Restart", type: .default) { (alertView) -> Void in
             self.backgroundColor = UIColor.white
             self.gameOn = true;
             // reset the game
+            // 1. clear screen
+            self.removeAllChildren()
+            self.oppSnakeNodes = []
+            self.mySnakeNodes = []
+            //self.removeAllActions()
+            // 2. add new snakes
+            self.createEnemySnake(snake: &self.oppSnakeNodes)
+            self.createPlayerSnake(snake: &self.mySnakeNodes)
+            self.addChild(self.moveAnalogStick)
         }
         alertView?.show()
- 
     }
-    
-
+    /*
+    func goToGameScene(){
+        let gameScene:GameScene = GameScene(size: self.view!.bounds.size) // create your new scene
+        let transition = SKTransition.fade(withDuration: 0.0) // create type of transition (you can check in documentation for more transtions)
+        gameScene.scaleMode = SKSceneScaleMode.fill
+        self.view!.presentScene(gameScene, transition: transition)
+    }*/
 }
 
 

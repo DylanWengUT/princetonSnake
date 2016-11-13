@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnalogStick Demo/GameScene.swift"
-            timestampString = "500704405.284172"
+            timestampString = "500714296.511647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "didMove(to:)"
             landmarkType = "7">
          </BreakpointContent>
