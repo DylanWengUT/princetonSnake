@@ -55,7 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.view!.addSubview(connectionLable!)
         
         /* Setup your scene here */
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.cyan
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         
         moveAnalogStick.position = CGPoint(x: moveAnalogStick.radius + 15, y: moveAnalogStick.radius + 15)
@@ -210,7 +210,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //create a snake
     func createSnake( snake: inout [SKSpriteNode]) {
        
-        let x = Int(arc4random_uniform(250))
+        let x = Int(arc4random_uniform(600)+10)
         var y: UInt32!
         repeat {
             y = arc4random_uniform(375)
