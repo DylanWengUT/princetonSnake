@@ -370,7 +370,7 @@ static SIAlertView *__si_alert_current_view;
         __si_alert_background_window = nil;
         return;
     }
-    [UIView animateWithDuration:0.3
+    [UIView animateWithDuration:0.0
                      animations:^{
                          __si_alert_background_window.alpha = 0;
                      }

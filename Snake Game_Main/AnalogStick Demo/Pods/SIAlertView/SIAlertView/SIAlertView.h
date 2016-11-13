@@ -20,8 +20,8 @@ typedef NS_ENUM(NSInteger, SIAlertViewButtonType) {
 };
 
 typedef NS_ENUM(NSInteger, SIAlertViewBackgroundStyle) {
-    SIAlertViewBackgroundStyleGradient = 0,
-    SIAlertViewBackgroundStyleSolid,
+    SIAlertViewBackgroundStyleSolid = 0,
+    SIAlertViewBackgroundStyleGradient ,
 };
 
 typedef NS_ENUM(NSInteger, SIAlertViewButtonsListStyle) {
