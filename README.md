@@ -8,3 +8,4 @@ Try not to hit other's bodies and the wall!
 
 Have fun and enjoy!
 
+![alt tag](https://github.com/DylanWengUT/princetonSnake/blob/master/dragon.png)
