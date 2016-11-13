@@ -24,11 +24,6 @@
 		8C2C1F7319DD762300510F35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C1F7219DD762300510F35 /* Images.xcassets */; };
 		8C2C1F7619DD762300510F35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C1F7419DD762300510F35 /* LaunchScreen.xib */; };
 		8C2C1F8219DD762300510F35 /* AnalogStick_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C1F8119DD762300510F35 /* AnalogStick_DemoTests.swift */; };
-<<<<<<< HEAD
-		A12A39491DD7F8DB000A1983 /* dragonHead.png in Resources */ = {isa = PBXBuildFile; fileRef = A12A39481DD7F8DB000A1983 /* dragonHead.png */; };
-		A1C348A31DD813CF003B11D2 /* dragonBody.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C348A21DD813CF003B11D2 /* dragonBody.png */; };
-=======
->>>>>>> d805b0bd34688c1578bf7be5576c0758188aa814
 		A35BEE501D95698D00464277 /* GameServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35BEE4F1D95698D00464277 /* GameServiceManager.swift */; };
 		A36D22DE1DD80B6E003494E6 /* dragonBody.png in Resources */ = {isa = PBXBuildFile; fileRef = A36D22DC1DD80B6E003494E6 /* dragonBody.png */; };
 		A36D22DF1DD80B6E003494E6 /* dragonHead.png in Resources */ = {isa = PBXBuildFile; fileRef = A36D22DD1DD80B6E003494E6 /* dragonHead.png */; };
@@ -73,11 +68,6 @@
 		8C2C1F8119DD762300510F35 /* AnalogStick_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogStick_DemoTests.swift; sourceTree = "<group>"; };
 		9E70BBAEE86E7C38B3195316 /* libPods-AnalogStick Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnalogStick Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7BBAAA034B19F48391A06A /* Pods-AnalogStick Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalogStick Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalogStick Demo/Pods-AnalogStick Demo.release.xcconfig"; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		A12A39481DD7F8DB000A1983 /* dragonHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonHead.png; sourceTree = "<group>"; };
-		A1C348A21DD813CF003B11D2 /* dragonBody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonBody.png; sourceTree = "<group>"; };
-=======
->>>>>>> d805b0bd34688c1578bf7be5576c0758188aa814
 		A35BEE4F1D95698D00464277 /* GameServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameServiceManager.swift; sourceTree = "<group>"; };
 		A36D22DC1DD80B6E003494E6 /* dragonBody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonBody.png; sourceTree = "<group>"; };
 		A36D22DD1DD80B6E003494E6 /* dragonHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonHead.png; sourceTree = "<group>"; };
@@ -121,12 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				EE6E9F481C8CB1D600B1F608 /* gear.png */,
-<<<<<<< HEAD
-				A1C348A21DD813CF003B11D2 /* dragonBody.png */,
-=======
 				A36D22DC1DD80B6E003494E6 /* dragonBody.png */,
 				A36D22DD1DD80B6E003494E6 /* dragonHead.png */,
->>>>>>> d805b0bd34688c1578bf7be5576c0758188aa814
 				EE6E9F491C8CB1D600B1F608 /* gear@2x.png */,
 				8C073A951B70FC5A005CE3AD /* apple.png */,
 				8C073A961B70FC5A005CE3AD /* apple@2x.png */,
@@ -320,7 +306,6 @@
 				8C073AA11B70FC5A005CE3AD /* jStick.png in Resources */,
 				EE6E9F4B1C8CB1D600B1F608 /* gear@2x.png in Resources */,
 				8C073AA71B70FC5A005CE3AD /* plus.png in Resources */,
-				A1C348A31DD813CF003B11D2 /* dragonBody.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
