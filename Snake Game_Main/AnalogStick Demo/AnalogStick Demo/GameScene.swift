@@ -80,7 +80,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //MARK: Handlers end
         joystickStickImageEnabled = true
-        joystickSubstrateImageEnabled = true
+        joystickSubstrateImageEnabled = false
         
         //add opponent snake
         createEnemySnake(snake: &oppSnakeNodes)
@@ -155,7 +155,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //create an enemy snake
     func createEnemySnake( snake: inout [SKSpriteNode]) { //inout- pass by reference
         snake.append(addEnemySnakeHead(CGPoint(x: frame.midX, y: frame.midY)))
-        for i in 1 ..< 13 {
+        for i in 1 ..< 15 {
             snake.append(addEnemySnakeBody(CGPoint(x: frame.midX + CGFloat(i*10), y: frame.midY)))
         }
     }
@@ -173,7 +173,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         snake.append(addPlayerSnakeHead(CGPoint(x: CGFloat(x), y: CGFloat(y))))
         var C = (arc4random_uniform(2) == 1 ? 10 : -10)
         
-        for i in 1 ..< 13 {
+        for i in 1 ..< 15 {
             snake.append(addPlayerSnakeBody(CGPoint(x: CGFloat(x + i * C), y: CGFloat(y))))
         }
         if (C == -10) {

@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C073AA11B70FC5A005CE3AD /* jStick.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A971B70FC5A005CE3AD /* jStick.png */; };
-		8C073AA21B70FC5A005CE3AD /* jStick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A981B70FC5A005CE3AD /* jStick@2x.png */; };
 		8C073AA31B70FC5A005CE3AD /* jSubstrate.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A991B70FC5A005CE3AD /* jSubstrate.png */; };
-		8C073AA41B70FC5A005CE3AD /* jSubstrate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A9A1B70FC5A005CE3AD /* jSubstrate@2x.png */; };
 		8C073AA71B70FC5A005CE3AD /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A9D1B70FC5A005CE3AD /* plus.png */; };
 		8C2C1F6819DD762300510F35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C1F6719DD762300510F35 /* AppDelegate.swift */; };
 		8C2C1F6C19DD762300510F35 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C1F6B19DD762300510F35 /* GameScene.swift */; };
@@ -41,9 +39,7 @@
 
 /* Begin PBXFileReference section */
 		8C073A971B70FC5A005CE3AD /* jStick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jStick.png; sourceTree = "<group>"; };
-		8C073A981B70FC5A005CE3AD /* jStick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jStick@2x.png"; sourceTree = "<group>"; };
 		8C073A991B70FC5A005CE3AD /* jSubstrate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jSubstrate.png; sourceTree = "<group>"; };
-		8C073A9A1B70FC5A005CE3AD /* jSubstrate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jSubstrate@2x.png"; sourceTree = "<group>"; };
 		8C073A9D1B70FC5A005CE3AD /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		8C2C1F6219DD762300510F35 /* AnalogStick Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnalogStick Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2C1F6619DD762300510F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,9 +101,7 @@
 				A192BE6C1DD849E300A57138 /* princeton.png */,
 				A192BE6E1DD849EA00A57138 /* sky.png */,
 				8C073A971B70FC5A005CE3AD /* jStick.png */,
-				8C073A981B70FC5A005CE3AD /* jStick@2x.png */,
 				8C073A991B70FC5A005CE3AD /* jSubstrate.png */,
-				8C073A9A1B70FC5A005CE3AD /* jSubstrate@2x.png */,
 				8C073A9D1B70FC5A005CE3AD /* plus.png */,
 			);
 			name = images;
@@ -277,13 +271,11 @@
 				A192BE6F1DD849EA00A57138 /* sky.png in Resources */,
 				A36D22DF1DD80B6E003494E6 /* dragonHead.png in Resources */,
 				8C2C1F7619DD762300510F35 /* LaunchScreen.xib in Resources */,
-				8C073AA41B70FC5A005CE3AD /* jSubstrate@2x.png in Resources */,
 				A36D22DE1DD80B6E003494E6 /* dragonBody.png in Resources */,
 				A3915E1C1D96DA4F00556AEE /* Podfile in Resources */,
 				A192BE6D1DD849E300A57138 /* princeton.png in Resources */,
 				8C2C1F7319DD762300510F35 /* Images.xcassets in Resources */,
 				8C2C1F7119DD762300510F35 /* Main.storyboard in Resources */,
-				8C073AA21B70FC5A005CE3AD /* jStick@2x.png in Resources */,
 				8C073AA11B70FC5A005CE3AD /* jStick.png in Resources */,
 				8C073AA71B70FC5A005CE3AD /* plus.png in Resources */,
 			);
