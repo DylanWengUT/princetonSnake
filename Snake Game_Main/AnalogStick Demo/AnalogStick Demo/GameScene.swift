@@ -193,10 +193,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //create a snake
     func createPlayerSnake( snake: inout [SKSpriteNode]) {
        
-        let x = Int(arc4random_uniform(600)+10)
+        let x = Int(arc4random_uniform(600)+15)
         var y: UInt32!
         repeat {
-            y = arc4random_uniform(375)
+            y = arc4random_uniform(360) + 15
         } while y == UInt32(frame.midY)
         
         snake.append(addPlayerSnakeHead(CGPoint(x: CGFloat(x), y: CGFloat(y))))
