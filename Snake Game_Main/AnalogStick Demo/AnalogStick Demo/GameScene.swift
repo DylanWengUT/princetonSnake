@@ -26,6 +26,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var mySnakeNodes: [SKSpriteNode] = []
     var oppSnakeNodes: [SKSpriteNode] = []
     
+    // use for setting Alert View condition
+    var gameOn = true;
+    
     var joystickStickImageEnabled = true {
         didSet {
             let image = joystickStickImageEnabled ? UIImage(named: "jStick") : nil
@@ -108,26 +111,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             mySnakeNodes[0].position = CGPoint(x: 100, y: 100)
             //print(mySnakeNodes[0].position)
             collision = true
-        }*/
+        }
         //self.presentViewController(alertController, animated: true, completion: nil)
         
         let firstNode = contact.bodyA.node as? SKSpriteNode
         let secondNode = contact.bodyB.node as? SKSpriteNode
-        
-        if ( ((Int(contact.bodyA.categoryBitMask) & Int(contact.bodyB.collisionBitMask)) != 0) || ((Int(contact.bodyB.categoryBitMask) & Int(contact.bodyA.collisionBitMask)) != 0) ) {
+        */
+        if ( gameOn && ( ((Int(contact.bodyA.categoryBitMask) & Int(contact.bodyB.collisionBitMask)) != 0) || ((Int(contact.bodyB.categoryBitMask) & Int(contact.bodyA.collisionBitMask)) != 0) ) ) {
             
             print("看这里！！！！！！！！！！")
-            
-            /*
-            let contactPoint = contact.contactPoint
-            let contact_y = contactPoint.y
-            let target_y = secondNode?.position.y
-            let margin = (secondNode?.frame.size.height)!/2 - 25
-            
-            if (contact_y > (target_y! - margin)) &&
-                (contact_y < (target_y! + margin)) {
-                print("Hit")
-            }*/
+            gameOn = false;
+            endGame()
         }
     }
     
@@ -315,6 +309,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
+    
+    
+    func endGame() {
+        // disconnect from multipeer connectivity
+        //disconnectFromMC(manager: GameServiceManager)
+        self.gameService.session.disconnect()
+        if (gameOn == false) {
+            showPauseAlert();
+            //gameOn = true;
+        }
+        
+    }
 }
 
 
@@ -336,10 +342,11 @@ extension GameScene : GameServiceManagerDelegate {
 // alert message
 private extension GameScene {
     func showPauseAlert() {
-        let alertView = SIAlertView(title: "Edess!!", andMessage: "Congratulations! test testing bla bla bla")
+        let alertView = SIAlertView(title: "Game end!!", andMessage: "Congratulations! test testing bla bla bla")
         
-        alertView?.addButton(withTitle: "OK", type: .default) { (alertView) -> Void in
-            //self.collision = false
+        alertView?.addButton(withTitle: "Restart", type: .default) { (alertView) -> Void in
+            self.gameOn = true;
+            // reset the game
         }
         
         alertView?.show()

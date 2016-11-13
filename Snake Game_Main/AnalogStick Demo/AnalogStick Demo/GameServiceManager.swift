@@ -15,7 +15,6 @@ protocol GameServiceManagerDelegate {
     
     func receiveMove(_ manager : GameServiceManager, toPosition : CGPoint, rotation: CGFloat)
     //func colorChanged(_ manager : GameServiceManager, colorString: String)
-    
 }
 
 class GameServiceManager : NSObject {
