@@ -7,16 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C073A9F1B70FC5A005CE3AD /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A951B70FC5A005CE3AD /* apple.png */; };
-		8C073AA01B70FC5A005CE3AD /* apple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A961B70FC5A005CE3AD /* apple@2x.png */; };
 		8C073AA11B70FC5A005CE3AD /* jStick.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A971B70FC5A005CE3AD /* jStick.png */; };
 		8C073AA21B70FC5A005CE3AD /* jStick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A981B70FC5A005CE3AD /* jStick@2x.png */; };
 		8C073AA31B70FC5A005CE3AD /* jSubstrate.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A991B70FC5A005CE3AD /* jSubstrate.png */; };
 		8C073AA41B70FC5A005CE3AD /* jSubstrate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A9A1B70FC5A005CE3AD /* jSubstrate@2x.png */; };
-		8C073AA51B70FC5A005CE3AD /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A9B1B70FC5A005CE3AD /* minus.png */; };
-		8C073AA61B70FC5A005CE3AD /* minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A9C1B70FC5A005CE3AD /* minus@2x.png */; };
 		8C073AA71B70FC5A005CE3AD /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A9D1B70FC5A005CE3AD /* plus.png */; };
-		8C073AA81B70FC5A005CE3AD /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C073A9E1B70FC5A005CE3AD /* plus@2x.png */; };
 		8C2C1F6819DD762300510F35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C1F6719DD762300510F35 /* AppDelegate.swift */; };
 		8C2C1F6C19DD762300510F35 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C1F6B19DD762300510F35 /* GameScene.swift */; };
 		8C2C1F6E19DD762300510F35 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C1F6D19DD762300510F35 /* GameViewController.swift */; };
@@ -24,15 +19,13 @@
 		8C2C1F7319DD762300510F35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C1F7219DD762300510F35 /* Images.xcassets */; };
 		8C2C1F7619DD762300510F35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C1F7419DD762300510F35 /* LaunchScreen.xib */; };
 		8C2C1F8219DD762300510F35 /* AnalogStick_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C1F8119DD762300510F35 /* AnalogStick_DemoTests.swift */; };
-		A192BE691DD83DD800A57138 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = A192BE681DD83DD800A57138 /* sky.png */; };
-		A192BE6B1DD8408B00A57138 /* princeton.png in Resources */ = {isa = PBXBuildFile; fileRef = A192BE6A1DD8408B00A57138 /* princeton.png */; };
+		A192BE6D1DD849E300A57138 /* princeton.png in Resources */ = {isa = PBXBuildFile; fileRef = A192BE6C1DD849E300A57138 /* princeton.png */; };
+		A192BE6F1DD849EA00A57138 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = A192BE6E1DD849EA00A57138 /* sky.png */; };
 		A35BEE501D95698D00464277 /* GameServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35BEE4F1D95698D00464277 /* GameServiceManager.swift */; };
 		A36D22DE1DD80B6E003494E6 /* dragonBody.png in Resources */ = {isa = PBXBuildFile; fileRef = A36D22DC1DD80B6E003494E6 /* dragonBody.png */; };
 		A36D22DF1DD80B6E003494E6 /* dragonHead.png in Resources */ = {isa = PBXBuildFile; fileRef = A36D22DD1DD80B6E003494E6 /* dragonHead.png */; };
 		A3915E1C1D96DA4F00556AEE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A3915E1B1D96DA4F00556AEE /* Podfile */; };
 		C1CFFF2124B5100F130C9710 /* libPods-AnalogStick Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E70BBAEE86E7C38B3195316 /* libPods-AnalogStick Demo.a */; };
-		EE6E9F4A1C8CB1D600B1F608 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = EE6E9F481C8CB1D600B1F608 /* gear.png */; };
-		EE6E9F4B1C8CB1D600B1F608 /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE6E9F491C8CB1D600B1F608 /* gear@2x.png */; };
 		EECFA6FD1D909BC8002FD501 /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECFA6FC1D909BC8002FD501 /* AnalogJoystick.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,16 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8C073A951B70FC5A005CE3AD /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
-		8C073A961B70FC5A005CE3AD /* apple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple@2x.png"; sourceTree = "<group>"; };
 		8C073A971B70FC5A005CE3AD /* jStick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jStick.png; sourceTree = "<group>"; };
 		8C073A981B70FC5A005CE3AD /* jStick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jStick@2x.png"; sourceTree = "<group>"; };
 		8C073A991B70FC5A005CE3AD /* jSubstrate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jSubstrate.png; sourceTree = "<group>"; };
 		8C073A9A1B70FC5A005CE3AD /* jSubstrate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jSubstrate@2x.png"; sourceTree = "<group>"; };
-		8C073A9B1B70FC5A005CE3AD /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
-		8C073A9C1B70FC5A005CE3AD /* minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus@2x.png"; sourceTree = "<group>"; };
 		8C073A9D1B70FC5A005CE3AD /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
-		8C073A9E1B70FC5A005CE3AD /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
 		8C2C1F6219DD762300510F35 /* AnalogStick Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnalogStick Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2C1F6619DD762300510F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C2C1F6719DD762300510F35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,16 +58,14 @@
 		8C2C1F8119DD762300510F35 /* AnalogStick_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogStick_DemoTests.swift; sourceTree = "<group>"; };
 		9E70BBAEE86E7C38B3195316 /* libPods-AnalogStick Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnalogStick Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7BBAAA034B19F48391A06A /* Pods-AnalogStick Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalogStick Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalogStick Demo/Pods-AnalogStick Demo.release.xcconfig"; sourceTree = "<group>"; };
-		A192BE681DD83DD800A57138 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
-		A192BE6A1DD8408B00A57138 /* princeton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = princeton.png; sourceTree = "<group>"; };
+		A192BE6C1DD849E300A57138 /* princeton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = princeton.png; sourceTree = "<group>"; };
+		A192BE6E1DD849EA00A57138 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
 		A35BEE4F1D95698D00464277 /* GameServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameServiceManager.swift; sourceTree = "<group>"; };
 		A36D22DC1DD80B6E003494E6 /* dragonBody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonBody.png; sourceTree = "<group>"; };
 		A36D22DD1DD80B6E003494E6 /* dragonHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragonHead.png; sourceTree = "<group>"; };
 		A3915E1B1D96DA4F00556AEE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3915E1D1D96DC6400556AEE /* AnalogStick Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnalogStick Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA538C515C56CD6A1EEFD6A1 /* Pods-AnalogStick Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalogStick Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalogStick Demo/Pods-AnalogStick Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		EE6E9F481C8CB1D600B1F608 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
-		EE6E9F491C8CB1D600B1F608 /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
 		EECFA6FC1D909BC8002FD501 /* AnalogJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogJoystick.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,22 +100,15 @@
 		8C073A941B70FC06005CE3AD /* images */ = {
 			isa = PBXGroup;
 			children = (
-				EE6E9F481C8CB1D600B1F608 /* gear.png */,
-				A192BE6A1DD8408B00A57138 /* princeton.png */,
 				A36D22DC1DD80B6E003494E6 /* dragonBody.png */,
 				A36D22DD1DD80B6E003494E6 /* dragonHead.png */,
-				EE6E9F491C8CB1D600B1F608 /* gear@2x.png */,
-				8C073A951B70FC5A005CE3AD /* apple.png */,
-				A192BE681DD83DD800A57138 /* sky.png */,
-				8C073A961B70FC5A005CE3AD /* apple@2x.png */,
+				A192BE6C1DD849E300A57138 /* princeton.png */,
+				A192BE6E1DD849EA00A57138 /* sky.png */,
 				8C073A971B70FC5A005CE3AD /* jStick.png */,
 				8C073A981B70FC5A005CE3AD /* jStick@2x.png */,
 				8C073A991B70FC5A005CE3AD /* jSubstrate.png */,
 				8C073A9A1B70FC5A005CE3AD /* jSubstrate@2x.png */,
-				8C073A9B1B70FC5A005CE3AD /* minus.png */,
-				8C073A9C1B70FC5A005CE3AD /* minus@2x.png */,
 				8C073A9D1B70FC5A005CE3AD /* plus.png */,
-				8C073A9E1B70FC5A005CE3AD /* plus@2x.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -254,7 +233,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Dmitriy Mitrophanskiy";
 				TargetAttributes = {
 					8C2C1F6119DD762300510F35 = {
@@ -295,24 +274,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C073AA31B70FC5A005CE3AD /* jSubstrate.png in Resources */,
+				A192BE6F1DD849EA00A57138 /* sky.png in Resources */,
 				A36D22DF1DD80B6E003494E6 /* dragonHead.png in Resources */,
-				A192BE6B1DD8408B00A57138 /* princeton.png in Resources */,
 				8C2C1F7619DD762300510F35 /* LaunchScreen.xib in Resources */,
 				8C073AA41B70FC5A005CE3AD /* jSubstrate@2x.png in Resources */,
-				8C073AA01B70FC5A005CE3AD /* apple@2x.png in Resources */,
 				A36D22DE1DD80B6E003494E6 /* dragonBody.png in Resources */,
 				A3915E1C1D96DA4F00556AEE /* Podfile in Resources */,
+				A192BE6D1DD849E300A57138 /* princeton.png in Resources */,
 				8C2C1F7319DD762300510F35 /* Images.xcassets in Resources */,
-				8C073A9F1B70FC5A005CE3AD /* apple.png in Resources */,
 				8C2C1F7119DD762300510F35 /* Main.storyboard in Resources */,
-				8C073AA81B70FC5A005CE3AD /* plus@2x.png in Resources */,
-				EE6E9F4A1C8CB1D600B1F608 /* gear.png in Resources */,
 				8C073AA21B70FC5A005CE3AD /* jStick@2x.png in Resources */,
-				8C073AA51B70FC5A005CE3AD /* minus.png in Resources */,
-				8C073AA61B70FC5A005CE3AD /* minus@2x.png in Resources */,
 				8C073AA11B70FC5A005CE3AD /* jStick.png in Resources */,
-				EE6E9F4B1C8CB1D600B1F608 /* gear@2x.png in Resources */,
-				A192BE691DD83DD800A57138 /* sky.png in Resources */,
 				8C073AA71B70FC5A005CE3AD /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,8 +410,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -482,8 +456,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

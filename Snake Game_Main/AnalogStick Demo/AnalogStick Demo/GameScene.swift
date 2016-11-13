@@ -64,8 +64,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.view!.addSubview(connectionLable!)
         
         /* Setup your scene here */
-        backgroundColor = UIColor.cyan
-    
+        backgroundColor = UIColor.white
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         
         moveAnalogStick.position = CGPoint(x: moveAnalogStick.radius + 15, y: moveAnalogStick.radius + 15)
@@ -318,7 +317,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.gameService.session.disconnect()
         if (gameOn == false) {
             showPauseAlert();
-            //gameOn = true;
         }
         
     }
@@ -343,14 +341,19 @@ extension GameScene : GameServiceManagerDelegate {
 // alert message
 private extension GameScene {
     func showPauseAlert() {
-        let alertView = SIAlertView(title: "Game end!!", andMessage: "Congratulations! test testing bla bla bla")
-        
+
+        let alertView = SIAlertView(title: "Game end!!", andMessage: "Do you want to restart?")
+        self.backgroundColor = UIColor.black
         alertView?.addButton(withTitle: "Restart", type: .default) { (alertView) -> Void in
+            self.backgroundColor = UIColor.white
             self.gameOn = true;
             // reset the game
         }
-        
         alertView?.show()
+ 
     }
+    
+
 }
+
 
