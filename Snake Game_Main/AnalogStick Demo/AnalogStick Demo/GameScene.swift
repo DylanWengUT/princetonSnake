@@ -76,13 +76,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         joystickStickImageEnabled = true
         joystickSubstrateImageEnabled = true
         
+        //add opponent snake
+        creatEnemySnake(snake: &oppSnakeNodes)
+        setUpCollisionBitMask(snake: &oppSnakeNodes)
+        
         //add snake & oppSnake
         creatSnake(snake: &mySnakeNodes)
         setUpCollisionBitMask(snake: &mySnakeNodes)
-        
-        //add opponent snake
-        creatSnake(snake: &oppSnakeNodes)
-        setUpCollisionBitMask(snake: &oppSnakeNodes)
+       
         /*
         for node in oppSnakeNodes {
             insertChild(node, at: 0)
@@ -197,7 +198,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //creat a snake
-    func creatSnake( snake: inout [SKSpriteNode]) {
+    func creatEnemySnake( snake: inout [SKSpriteNode]) {
         /* //random not working
         let x = UInt32(frame.size.width)
         let y = UInt32(frame.size.height)
@@ -210,6 +211,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         */
         
         snake.append(addSnakeHead(CGPoint(x: frame.midX, y: frame.midY)))
+        
+        for i in 1 ..< 13 {
+            snake.append(addSnakeBody(CGPoint(x: frame.midX + CGFloat(i*10), y: frame.midY)))
+        }
+    
+    }
+    //creat a snake
+    func creatSnake( snake: inout [SKSpriteNode]) {
+        /* //random not working
+         let x = UInt32(frame.size.width)
+         let y = UInt32(frame.size.height)
+         position = CGPoint(x: Int(arc4random() % x), y: Int(arc4random() % y))
+         snake.append(addSnakeHead(CGPoint(x: position.x, y: position.y)))
+         snake.append(addSnakeBody(CGPoint(x: position.x + 20, y: position.y)))
+         snake.append(addSnakeBody(CGPoint(x: position.x + 40, y: position.y)))
+         snake.append(addSnakeBody(CGPoint(x: position.x + 60, y: position.y)))
+         snake.append(addSnakeBody(CGPoint(x: position.x + 80, y: position.y)))
+         */
+        //random number between 1 and 375)
+        var x = Int(arc4random_uniform(250))
+        var y: UInt32!
+        repeat {
+            y = arc4random_uniform(375)
+        } while y == UInt32(frame.midY)
+        
+        snake.append(addSnakeHead(CGPoint(x: CGFloat(x), y: CGFloat(y))))
+        
+        for i in 1 ..< 13 {
+            snake.append(addSnakeBody(CGPoint(x: CGFloat(x + i * 10), y: CGFloat(y))))
+        }
+        
+        /*
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 20, y: frame.midY)))
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 30, y: frame.midY)))
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 40, y: frame.midY)))
@@ -221,7 +254,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 110, y: frame.midY)))
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 120, y: frame.midY)))
         snake.append(addSnakeBody(CGPoint(x: frame.midX + 130, y: frame.midY)))
+        */
     }
+
+    
     
     //adding head
     func addSnakeHead(_ position: CGPoint) ->  SKSpriteNode {
