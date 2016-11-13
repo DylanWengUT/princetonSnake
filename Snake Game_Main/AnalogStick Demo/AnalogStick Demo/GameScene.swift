@@ -34,7 +34,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    let moveAnalogStick =  🕹(diameter: 80)
+    let moveAnalogStick =  🕹(diameter: 100)
     
     //multipeer conectivity
     let gameService = GameServiceManager()
@@ -77,11 +77,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         joystickSubstrateImageEnabled = true
         
         //add opponent snake
-        creatEnemySnake(snake: &oppSnakeNodes)
+        createEnemySnake(snake: &oppSnakeNodes)
         setUpCollisionBitMask(snake: &oppSnakeNodes)
         
         //add snake & oppSnake
-        creatSnake(snake: &mySnakeNodes)
+        createSnake(snake: &mySnakeNodes)
         setUpCollisionBitMask(snake: &mySnakeNodes)
        
         /*
@@ -152,7 +152,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for (index, snakeNode) in snake.enumerated() {
             //move head
             if index == 0 {
-                snake[0].position = CGPoint(x: snake[0].position.x + (data.velocity.x * 0.12), y: snake[0].position.y + (data.velocity.y * 0.12))
+                snake[0].position = CGPoint(x: snake[0].position.x + (data.velocity.x * 0.15), y: snake[0].position.y + (data.velocity.y * 0.15))
                 // rotate head
                 snake[0].zRotation = data.angular - 3.14/2
                 // sent snake head position
@@ -197,18 +197,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    //creat a snake
-    func creatEnemySnake( snake: inout [SKSpriteNode]) {
-        /* //random not working
-        let x = UInt32(frame.size.width)
-        let y = UInt32(frame.size.height)
-        position = CGPoint(x: Int(arc4random() % x), y: Int(arc4random() % y))
-        snake.append(addSnakeHead(CGPoint(x: position.x, y: position.y)))
-        snake.append(addSnakeBody(CGPoint(x: position.x + 20, y: position.y)))
-        snake.append(addSnakeBody(CGPoint(x: position.x + 40, y: position.y)))
-        snake.append(addSnakeBody(CGPoint(x: position.x + 60, y: position.y)))
-        snake.append(addSnakeBody(CGPoint(x: position.x + 80, y: position.y)))
-        */
+    //create an enemy snake
+    func createEnemySnake( snake: inout [SKSpriteNode]) { //inout- pass by reference
         
         snake.append(addSnakeHead(CGPoint(x: frame.midX, y: frame.midY)))
         
@@ -217,20 +207,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     
     }
-    //creat a snake
-    func creatSnake( snake: inout [SKSpriteNode]) {
-        /* //random not working
-         let x = UInt32(frame.size.width)
-         let y = UInt32(frame.size.height)
-         position = CGPoint(x: Int(arc4random() % x), y: Int(arc4random() % y))
-         snake.append(addSnakeHead(CGPoint(x: position.x, y: position.y)))
-         snake.append(addSnakeBody(CGPoint(x: position.x + 20, y: position.y)))
-         snake.append(addSnakeBody(CGPoint(x: position.x + 40, y: position.y)))
-         snake.append(addSnakeBody(CGPoint(x: position.x + 60, y: position.y)))
-         snake.append(addSnakeBody(CGPoint(x: position.x + 80, y: position.y)))
-         */
-        //random number between 1 and 375)
-        var x = Int(arc4random_uniform(250))
+    //create a snake
+    func createSnake( snake: inout [SKSpriteNode]) {
+       
+        let x = Int(arc4random_uniform(250))
         var y: UInt32!
         repeat {
             y = arc4random_uniform(375)
@@ -242,22 +222,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             snake.append(addSnakeBody(CGPoint(x: CGFloat(x + i * 10), y: CGFloat(y))))
         }
         
-        /*
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 20, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 30, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 40, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 60, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 70, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 80, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 90, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 100, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 110, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 120, y: frame.midY)))
-        snake.append(addSnakeBody(CGPoint(x: frame.midX + 130, y: frame.midY)))
-        */
     }
 
-    
     
     //adding head
     func addSnakeHead(_ position: CGPoint) ->  SKSpriteNode {
@@ -286,7 +252,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         snakeBody.physicsBody!.allowsRotation = false
         snakeBody.physicsBody!.isDynamic = false    // ignore forces
         
-        //collision & cotect
+        //collision & contact
         //snakeBody.physicsBody!.collisionBitMask = headCategory
         //snakeBody.physicsBody!.contactTestBitMask = headCategory
         
