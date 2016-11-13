@@ -196,7 +196,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let x = Int(arc4random_uniform(600)+10)
         var y: UInt32!
         repeat {
-            y = arc4random_uniform(375)
+            y = arc4random_uniform(370)+10
         } while y == UInt32(frame.midY)
         
         snake.append(addPlayerSnakeHead(CGPoint(x: CGFloat(x), y: CGFloat(y))))
