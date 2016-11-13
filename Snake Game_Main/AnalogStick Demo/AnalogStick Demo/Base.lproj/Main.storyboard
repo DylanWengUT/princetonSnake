@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-ef-cqT">
-                                <rect key="frame" x="26" y="-33" width="333" height="340"/>
+                                <rect key="frame" x="26" y="-33" width="349" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Welcome to Dragonio! This game was developed by Zidong Weng, Ethan Xue, and Root Luo, during Hack Princeton 2016. The game was inspired by the popular slitherio and is designed for casual 1v1 matches.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
