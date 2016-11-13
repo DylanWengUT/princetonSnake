@@ -1,12 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AbS-UF-sf6">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AbS-UF-sf6">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,14 +35,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky.png" translatesAutoresizingMaskIntoConstraints="NO" id="OlG-a0-eV2">
-                                <rect key="frame" x="-317" y="-33" width="1008" height="700"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sky.png" translatesAutoresizingMaskIntoConstraints="NO" id="OlG-a0-eV2">
+                                <frame key="frameInset" minX="-239" width="913" height="667"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="1008" id="o1U-Gx-ZGG"/>
+                                    <constraint firstAttribute="width" constant="948" id="6BN-Zc-toG"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rp-um-ivN">
-                                <rect key="frame" x="119" y="380.5" width="137" height="46"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Start Game">
@@ -57,21 +52,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-ef-cqT">
-                                <rect key="frame" x="26" y="-33" width="349" height="340"/>
+                                <frame key="frameInset" minX="33" minY="-97" width="408" height="369"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Welcome to Dragonio! This game was developed by Zidong Weng, Ethan Xue, and Root Luo, during Hack Princeton 2016. The game was inspired by the popular slitherio and is designed for casual 1v1 matches.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <string key="text">Welcome to Dragon.io! This game was developed by Zidong Weng, Ethan Xue, and Root Luo, during Hack Princeton 2016. The game was inspired by the popular slitherio and is designed for casual 1v1 matches.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OlG-a0-eV2" firstAttribute="top" secondItem="BDH-PI-x9n" secondAttribute="top" id="0Mm-yh-7CX"/>
+                            <constraint firstItem="My1-n3-gKX" firstAttribute="top" secondItem="OlG-a0-eV2" secondAttribute="bottom" id="AhH-iO-p73"/>
                             <constraint firstItem="6rp-um-ivN" firstAttribute="centerX" secondItem="BDH-PI-x9n" secondAttribute="centerX" id="Fi5-zH-SFw"/>
                             <constraint firstItem="6rp-um-ivN" firstAttribute="centerY" secondItem="BDH-PI-x9n" secondAttribute="centerY" constant="70" id="KoJ-5A-fuJ"/>
-                            <constraint firstItem="OlG-a0-eV2" firstAttribute="top" secondItem="BDH-PI-x9n" secondAttribute="topMargin" constant="-33" id="M0r-cb-HPV"/>
-                            <constraint firstItem="OlG-a0-eV2" firstAttribute="bottom" secondItem="My1-n3-gKX" secondAttribute="top" id="prj-MO-CBh"/>
-                            <constraint firstItem="OlG-a0-eV2" firstAttribute="leading" secondItem="BDH-PI-x9n" secondAttribute="leading" constant="-317" id="uTn-qc-d7X"/>
+                            <constraint firstItem="OlG-a0-eV2" firstAttribute="leading" secondItem="BDH-PI-x9n" secondAttribute="leading" constant="-274" id="St2-Cm-TFR"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -81,6 +76,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sky.png" width="1218" height="954"/>
+        <image name="sky.png" width="283" height="178"/>
     </resources>
 </document>

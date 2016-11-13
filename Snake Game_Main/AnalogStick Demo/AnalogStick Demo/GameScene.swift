@@ -203,7 +203,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addEnemySnakeHead(_ position: CGPoint) ->  SKSpriteNode {
-        let snakeImage = UIImage(named: "dragonHead")
+        let snakeImage = UIImage(named: "oppSnakeHead")
         
         let texture = SKTexture(image: snakeImage!)
         let snakeHead = SKSpriteNode(texture: texture)
@@ -244,7 +244,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addEnemySnakeBody(_ position: CGPoint) ->  SKSpriteNode {
-        let bodyImage = UIImage(named: "dragonBody")
+        let bodyImage = UIImage(named: "oppSnakeBody")
         
         let texture = SKTexture(image: bodyImage!)
         let snakeBody = SKSpriteNode(texture: texture)

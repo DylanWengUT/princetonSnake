@@ -23,9 +23,9 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DRAGON.IO | Hack Princeton '16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-an-aEg">
-                    <frame key="frameInset" minX="206" minY="150" width="263" height="49"/>
+                    <frame key="frameInset" minX="162" minY="150" width="424" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" red="0.84788221120834351" green="0.95760565996170044" blue="0.94159430265426636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
